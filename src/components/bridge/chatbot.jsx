@@ -14,6 +14,18 @@ const Chatbot = () => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    // Check if the pressed key is Enter (key code 13)
+    if (e.key === 'Enter') {
+      // Prevent the default behavior of the Enter key (e.g., form submission)
+      e.preventDefault();
+      
+      // Call the sendMessage function
+      sendMessage();
+    }
+  };
+  
+
   const sendMessage = async () => {
     if (input.trim() === '' && !fileInput) return;
 
@@ -59,7 +71,7 @@ const Chatbot = () => {
         const replyMessage = {
           sender: 'bot',
           type: 'text',
-          text: 'Thank you for your feedback!',
+          text: 'Backend is not deployed! :)',
         };
         setMessages([...messages, replyMessage]);
       }, 1000); // Adjust the delay as needed
@@ -81,7 +93,7 @@ const Chatbot = () => {
           </video>
         );
       case 'file':
-        return <div className="p-2 bg-yellow-200 text-black rounded-lg">{message.file.name}</div>;
+        return <img src={URL.createObjectURL(message.file)} alt="Chatbot" className="w-auto h-auto rounded-lg" />;
       default:
         return null;
     }
@@ -89,7 +101,11 @@ const Chatbot = () => {
   
 
   return (
-    <div className="md:container md:mx-auto my-1 rounded-sm flex flex-col h-screen bg-black md:w-2/4">
+    <div className='h-screen'>
+    <div className='font-bold text-5xl p-2'>
+        Welcome !! 
+    </div>
+    <div className="md:container h-5/6 md:mx-auto my-1 rounded-md flex flex-col bg-black md:w-2/4">
       <div className="flex-1 p-4 overflow-y-auto">
         {messages.map((message, index) => (
           <div
@@ -97,7 +113,7 @@ const Chatbot = () => {
             className={`mb-4 flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`inline-block p-2 rounded-lg bg-blue-500${
+              className={`inline-block p-2 rounded-lg w-5/6 bg-blue-500${
                 message.sender === 'user' ? '' : ' text-white'
               }`}
             >
@@ -106,36 +122,42 @@ const Chatbot = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-center p-4">
-        <input
-          type="file"
-          accept="image/*, video/*" // Allow selection of image and video files
-          onChange={handleFileInputChange}
-          className="hidden"
-          ref={fileInputRef} // Assign ref to file input
-        />
-        <button
-          onClick={() => fileInputRef.current.click()} // Programmatically trigger file input click
-          className="px-4 py-2 bg-yellow-200 text-black rounded-lg focus:outline-none"
-        >
-          Add File
-        </button>
+      <div className="flex items-center p-4 justify-between">
+        <div className='flex gap-2'>
+          <input
+            type="file"
+            accept="image/*, video/*" // Allow selection of image and video files
+            onChange={handleFileInputChange}
+            className="hidden"
+            ref={fileInputRef} // Assign ref to file input
+          />
+          <button
+            onClick={() => fileInputRef.current.click()} // Programmatically trigger file input click
+            className="px-2 py-1 bg-yellow-200 text-black rounded-lg focus:outline-none"
+          >
+            File
+          </button>
 
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Type your message..."
-          className="flex-1 mr-4 p-2 border border-gray-300 rounded-lg focus:outline-none"
-        />
-        
-        <button
-          onClick={sendMessage}
-          className="px-4 py-2 bg-yellow-200 text-black rounded-lg focus:outline-none"
-        >
-          Send
-        </button>
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Type your message..."
+            className="flex-1 mr-4 px-2 py-1 border max-w-5/6 md:max-w-full md:w-full border-gray-300 rounded-lg focus:outline-none"
+          />
+        </div>
+        <div>
+          <button
+            onClick={sendMessage}
+            className="px-4 py-1 bg-yellow-200 text-black rounded-lg focus:outline-none"
+          >
+            Send
+          </button>
+        </div>
+
+
       </div>
+    </div>
     </div>
   );
 };

@@ -12,6 +12,8 @@
   "login": [
     {
       "label": "Email",
+      "field": "email",
+      "value": "",
       "placeholder": "Email",
       "type": "email",
       "required": true
@@ -19,6 +21,8 @@
     {
       "label": "password",
       "placeholder": "Password",
+      "field": "password",
+      "value":"",
       "type": "password",
       "required": true
     }

@@ -16,19 +16,19 @@ import { insertToDB } from "../actions/operations";
 import Chatbot from "@/components/bridge/chatbot";
 
 export default function Movies() {
-  const [movies, setMovies] = useState([]);
+  // const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    console.log("DEBUG");
-    insertToDB({
-      name: "SUNJAY",
-      age: 20,
-      gender: "Male",
-      location: "Hyderabad",
-      description: "The movie that will be inserted into the database.",
-    });
-    console.log("INITT");
-  }, []);
+  // useEffect(() => {
+  //   console.log("DEBUG");
+  //   insertToDB({
+  //     name: "SUNJAY",
+  //     age: 20,
+  //     gender: "Male",
+  //     location: "Hyderabad",
+  //     description: "The movie that will be inserted into the database.",
+  //   });
+  //   console.log("INITT");
+  // }, []);
 
   // useEffect(() => {
   //   async function fetchMovies() {
