@@ -1,0 +1,60 @@
+{
+  "button": [
+    {
+      "label": "User",
+      "onclick": "user"
+    },
+    {
+      "label": "Owner",
+      "onclick": "owner"
+    }
+  ],
+  "login": [
+    {
+      "label": "Email",
+      "placeholder": "Email",
+      "type": "email",
+      "required": true
+    },
+    {
+      "label": "password",
+      "placeholder": "Password",
+      "type": "password",
+      "required": true
+    }
+  ],
+  "signup": [
+    {
+      "label": "Email address",
+      "field": "email",
+      "placeholder": "Enter address",
+      "type": "email",
+      "value":"",
+      "required": true
+    },
+    {
+      "label": "Full name",
+      "field": "fullname",
+      "placeholder": "Full name",
+      "type": "text",
+      "value":"",
+      "required": true
+    },
+    {
+      "label": "password",
+      "field": "password",
+      "placeholder": "Password",
+      "type": "password",
+      "value":"",
+      "required": true
+    },
+    {
+      "label": "Confirm password",
+      "field":"confirmPassword",
+      "placeholder": "Confirm password",
+      "type": "password",
+      "value":"",
+      "required": true
+    }
+  ]
+}

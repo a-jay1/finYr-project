@@ -1,0 +1,22 @@
+{
+  "socialmedialogos": [
+    "/assets/twitter.svg",
+    "/assets/instagram.svg",
+    "/assets/mail.svg"
+  ],
+  "footertext": [
+    "Register",
+    "Request",
+    "Login",
+    "About us",
+    "Contact",
+    "Others"
+  ],
+  "privacytext": [
+    "Purchase Flow",
+    "Terms and Conditions",
+    "Privacy Policy",
+    "Refund and Cancellation"
+  ],
+  "copyright":"Copyright © 2024. All Rights Reserved. Design And Developed by webnox.in."
+}

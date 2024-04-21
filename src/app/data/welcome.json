@@ -1,0 +1,55 @@
+{
+    "platformLogo": [
+        {
+            "source": "/assets/youtube.svg",
+            "height": "12",
+            "width": "54"
+        },
+        {
+            "source": "/assets/spotify.svg",
+            "height": "16",
+            "width": "53"
+        },
+        {
+            "source": "/assets/wynk.svg",
+            "height": "15",
+            "width": "78"
+        },
+        {
+            "source": "/assets/jioSaavn.svg",
+            "height": "21",
+            "width": "72"
+        },
+        {
+            "source": "/assets/amazonMusic.svg",
+            "height": "17",
+            "width": "70"
+        },
+        {
+            "source": "/assets/apple.svg",
+            "height": "17",
+            "width": "20"
+        }
+    ],
+    "personInfo": [
+        {
+            "source": "/assets/userImgIcon.svg",
+            "name": "Sarah",
+            "role": "Content Creator",
+            "description": "Copyva revolutionised the way I source music for my videos. Their platform made it easy to find the perfect tracks for my content, and their licensing process was ...."
+        },
+        {
+            "source": "/assets/userImgIcon.svg",
+            "name": "Sarah",
+            "role": "Content Creator",
+            "description": "Copyva revolutionised the way I source music for my videos. Their platform made it easy to find the perfect tracks for my content, and their licensing process was ...."
+        },
+        {
+            "source": "/assets/userImgIcon.svg",
+            "name": "Sarah",
+            "role": "Content Creator",
+            "description": "Copyva revolutionised the way I source music for my videos. Their platform made it easy to find the perfect tracks for my content, and their licensing process was ...."
+        }
+    ]
+
+}
