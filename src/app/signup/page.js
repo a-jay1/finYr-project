@@ -50,21 +50,19 @@ export default function Page() {
     const handleSignup = () => {
         
         // Call the handleInsertion function with the userForm data
-        
-
-        // Validation checks
-        // if (!/\S+@\S+\.\S+/.test(userForm.email)) {
-        //     alert("Invalid email format");
-        //     return;
-        // }
-        // if (userForm.password.length < 8) {
-        //     alert("Password should be at least 8 characters long");
-        //     return;
-        // }
-        // if (userForm.password !== userForm.confirmPassword) {
-        //     alert("Passwords don't match");
-        //     return;
-        // }
+        //Validation checks
+        if (!/\S+@\S+\.\S+/.test(userForm.email)) {
+            alert("Invalid email format");
+            return;
+        }
+        if (userForm.password.length < 8) {
+            alert("Password should be at least 8 characters long");
+            return;
+        }
+        if (userForm.password !== userForm.confirmPassword) {
+            alert("Passwords don't match");
+            return;
+        }
 
         // If all validations pass, you can proceed with signup
         handleInsertion(userForm);
