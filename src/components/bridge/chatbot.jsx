@@ -41,13 +41,17 @@ const Chatbot = () => {
 
     try {
       // Send user message to API
-      const response = await fetch('API_ENDPOINT', {
+      const response = await fetch('/api/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: input }),
+        data: {
+          query: input
+        },
       });
+
+      console.log(response,'log res');
 
       if (!response.ok) {
         throw new Error('Failed to send message to the server.');
