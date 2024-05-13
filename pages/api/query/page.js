@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     try {
       // Make a POST request to retrieve the PDF file
       const response = await axios({ 
-        url: '127.0.0.1:8000/diesease_find_find_post',
+        url: '127.0.0.1:8000/find',
         method: 'POST',
         data: req.body,
       });
